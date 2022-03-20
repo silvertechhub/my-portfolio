@@ -1,0 +1,267 @@
+@media only screen and (max-width: 768px) {
+    *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+     }
+    body{
+        width: 100%;
+    }
+    .pre-loader{
+        max-width: 100%;
+        height: 100vh;
+        background-color: #f8f5f1;
+        position: absolute;
+        z-index: 999999;
+    }
+    #logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 95%;
+        transform: translate(-50%, -50%);
+        animation: fill 0.5s ease forwards 3.4s;
+    } 
+    nav{
+        width: 100%;
+    }
+   .nav-list{
+       display: none;
+   }
+   .nav-list.active{
+       display: flex;
+       animation: fadeEffect 2s; /* Fading effect takes 1 second */
+   }
+   .brand-name{
+    display: inline-block;
+    padding: unset;
+    font-size: 34px;
+}
+   .brand-name.active{
+       display: none;
+   }
+   .nav-item{
+    padding: 15px;
+    padding-right: 1.7rem;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-left: 40px;
+    }
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #101010;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+/* ------end of navbar-------*/
+.hero{
+    margin: 0 0.5rem 0 0.5rem;
+    
+}
+.hero-text{
+    padding: 6rem 20px 0 35px;
+    
+}
+.hello{
+    font-size: 26px;
+    font-weight: 600;  
+}
+.hero-name{
+    font-size: 70px;
+    font-weight: 600;
+}
+.hero-rider{
+    font-size: 29px;
+}
+.hero-text{
+    font-size: 20px;
+    font-weight: 400;
+}
+.aboutme-arrow{
+    display: none;
+}
+#aboutme-section{
+    margin: 5rem 1.5rem 0 1.5rem;
+    height: 650px;
+}
+.me{
+    position: relative;
+    left: 1.8rem;  
+    bottom: 1rem; 
+}
+.aboutme-content{
+    padding: 6rem 20px 0 35px;
+    display: unset;
+}
+.aboutme-text{
+    position: unset;
+    left: unset;
+    margin: 0 10px 0 30px;
+    font-size: 20px;
+    height: 650px;
+    width: 300px; 
+    border-radius: 50%;
+    text-align: left;
+}
+#skill-section{
+    margin:  5rem 1.5rem 0 1.5rem;
+}
+.skill-underline{
+    padding-top: 1rem;
+    margin-left: 1rem;
+    border-bottom: 0.2px solid #f8a488;
+    width: 300px;
+    
+}
+.skill{
+    margin: 30px 0;
+    width: 100px;
+    height: 90px;
+    padding: 20px ;
+}
+.skill-image{
+    padding: 20px 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    padding: 2rem 3rem 3rem 0;
+}
+
+.skill-name{
+    font-size: 15px;
+}
+#project-section{
+    margin: 2rem 0.9rem 0 2rem ;
+}
+.grid-container2{
+    display: grid;
+    grid-template-columns: auto;
+    padding-top: 2rem;
+}
+.projects-underline{
+    padding-top: 1rem;
+    margin-left: 3rem;
+    border-bottom: 0.2px solid #5aa897;
+    width: 300px;
+}
+.exp-section{
+    margin: 6rem 0.9rem 0 2rem ;
+}
+.exp-header{
+    text-align: center;
+    color: #5aa897;
+}
+.exp-cards{
+    display: flex;
+  flex-direction: column;
+  
+    /* grid-template-columns: auto; */
+    margin: 15px 0; 
+    
+}
+.exp-card{
+    margin: 1rem 0 7rem 0;
+    height: 240px;
+    width: 100%;
+    border: none;
+
+}
+.genesys{
+    padding-left: 5px;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+.exp-divider{
+    border-bottom: 1px solid #343a40;
+    position: relative;
+    padding-top: 1rem;
+}
+.exp-caption{
+    position: relative;
+    padding-top: 1rem;
+    text-align: center;
+}
+.contact-section{
+    background-color: #45526c;
+    margin-top: 4rem;
+    height: 550px;
+    
+}
+.contact-grid-container{
+    display: unset;
+}
+.email-phone{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 20px 40px 20px 40px;
+}
+.phone{
+    padding: unset; 
+}
+.email{
+    padding: unset;
+}
+.divider{
+    display: none;
+}
+.social-connect{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    text-align: center;
+}
+.social-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 290px;
+    position: relative;
+    left: 2.5rem;
+}
+.fab{
+    font-size: 30px;
+    padding-top: 2rem;
+}
+footer{
+    background-color: #343a40;
+    color: blanchedalmond;
+    height: 30px;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 10px;
+}
+}
