@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+.left-50 {
+    left: 50%;
+}
+.right-50 {
+    right: 50%;
+}
+.top-50 {
+    top: 50%;
+}
+
+.selected-circle {
+    @apply border-hero bg-hero;
+}
+.nav-dot{
+    transition: background 200ms, border-color 200ms;
+}
+
+.nav-dot:hover span{
+    opacity: 1;
+}
+
+
+
+/* copied css */
+#circular-text {
+    position: fixed;
+    color: white;
+    font-size: 12px;
+    border-radius: 100%;
+    /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); */
+    /* padding: 20px; */
+  }
+  
+  #circular-text span {
+    position: absolute;
+    transform-origin: top left;
+  }
+  /* .rotate-div {
+    animation: rotation 12s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  } */
+
+  #link-btn #link-icon{
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+  }
