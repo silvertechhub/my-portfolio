@@ -1,8 +1,10 @@
+
+
 const degreeToRadian = (angle) => {
     return angle * (Math.PI / 180);
   };
   
-  const radius = 60;
+  const radius = 45;
   const diameter = radius * 2;
   
   const circle = document.querySelector("#circular-text");
@@ -33,4 +35,28 @@ const degreeToRadian = (angle) => {
     currentAngle += deltaAngle;
     circle.appendChild(charElement);
   });
-  
+//   ------------------------ scroll
+
+function updateList() {
+	const titles = [...document.querySelectorAll('section, main ')].sort((a, b) => {
+		return Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top);
+	});
+
+	document.querySelectorAll(".selected-circle").forEach(c => c.classList.remove("selected-circle"));
+	
+	document.querySelectorAll(".nav-dot")[[...document.querySelectorAll('section, main')].indexOf(titles[0])].classList.add("selected-circle");
+}
+
+updateList();
+window.addEventListener('scroll', () => {
+    updateList();
+})
+
+// ------------------------gsap
+
+// let tl = gsap.timeline({defaults: {ease: "none", duration: 2}});
+
+// tl.to(".projectCardA", {opacity: 1, X:500, stagger:.6,  })
+// // tl.to(".projectCard2", {opacity: 1, X:100, stagger:.4,  }, '-=2')
+
+// // tl.to("#card2", {opacity: 1, x:-10, duration: 4},'-=2')

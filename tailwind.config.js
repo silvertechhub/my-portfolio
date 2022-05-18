@@ -9,7 +9,10 @@ module.exports = {
       backgroundImage: {
         "hero-bg": "url('/assets/Backgroundsvg.svg')",
         "bg-vh": "url('/assets/Background.png')"
-      }
+      },
+      fontFamily: {
+       "domaine": ["domaineDisplay", "sans-serif"]
+      },
     },
   },
   plugins: [],
