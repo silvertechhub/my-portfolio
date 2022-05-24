@@ -96,15 +96,15 @@ icon.addEventListener("click", () => { menu.classList.toggle("hidden");
  })
  
 // add preloader
-// const preloader = document.querySelector('#pre-loader');
+const preloader = document.querySelector('#pre-loader');
 
-// // window.addEventListener("load", () => {
-// //   preloader.style.display = "none"
-// // })
-// window.addEventListener("load", loaded )
-// function loaded(event)
-// {
-//     setTimeout(function(){
-//       preloader.style.display = "none"
-//     },4100);
-// }
+// window.addEventListener("load", () => {
+//   preloader.style.display = "none"
+// })
+window.addEventListener("load", loaded )
+function loaded(event)
+{
+    setTimeout(function(){
+      preloader.style.display = "none"
+    },4100);
+}
