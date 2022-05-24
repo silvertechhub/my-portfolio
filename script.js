@@ -52,6 +52,24 @@ window.addEventListener('scroll', () => {
     updateList();
 })
 
+
+// ------------------------inspection observer
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const square = entry.target.querySelectorAll('.animate__animated');
+    if (entry.isIntersecting) {
+      square.classList.add('animate__slideInLeft');
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    square.classList.remove('animate__slideInLeft');
+  });
+});
+
+observer.observe(document.querySelector('.project-cards'));
+
 // ------------------------gsap
 
 // let tl = gsap.timeline({defaults: {ease: "none", duration: 2}});
@@ -60,3 +78,33 @@ window.addEventListener('scroll', () => {
 // // tl.to(".projectCard2", {opacity: 1, X:100, stagger:.4,  }, '-=2')
 
 // // tl.to("#card2", {opacity: 1, x:-10, duration: 4},'-=2')
+
+// -------------------------mobile menu
+const menu = document.querySelector('.mobile-menu');
+const icon = document.querySelector('.menu-icon');
+const xIcon = document.querySelector('.xIcon')
+
+icon.addEventListener("click", () => { menu.classList.toggle("hidden");
+                                        icon.classList.toggle("hidden")
+                                        xIcon.classList.remove("hidden")
+ });
+
+ xIcon.addEventListener("click", () => {
+   xIcon.classList.toggle("hidden");
+   icon.classList.remove("hidden");
+   menu.classList.add("hidden")
+ })
+ 
+// add preloader
+// const preloader = document.querySelector('#pre-loader');
+
+// // window.addEventListener("load", () => {
+// //   preloader.style.display = "none"
+// // })
+// window.addEventListener("load", loaded )
+// function loaded(event)
+// {
+//     setTimeout(function(){
+//       preloader.style.display = "none"
+//     },4100);
+// }

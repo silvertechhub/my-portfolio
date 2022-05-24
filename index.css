@@ -35,24 +35,12 @@ html, body {
     opacity: 1;
 }
 
-/* article{
-    display: block;
-}
 
-article:after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    transform-origin: 100% 0;
-    background: white;
-} */
 
 /* copied css */
 #circular-text {
     position: fixed;
-    color: white;
+    color:white;
     border-radius: 100%;
     /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); */
     /* padding: 20px; */
@@ -62,8 +50,48 @@ article:after{
     position: absolute;
     transform-origin: top left;
   }
+  #pre-loader{
+    background: black  no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+  }
+  .loader{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    animation: pulse 0.8s infinite linear;
+  }
   .rotate-div {
     animation: rotation 12s infinite linear;
+  }
+  .animate__animated{
+    top: 0;
+  }
+  
+   .animate__slideInLeft{
+     display: block;
+   }
+   .project-cards{
+     text-decoration: none;
+   }
+  
+   @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      
+    }
+  
+    70% {
+      transform: scale(1);
+      
+    }
+  
+    100% {
+      transform: scale(0.95);
+      
+    }
   }
   
   @keyframes rotation {
@@ -75,8 +103,201 @@ article:after{
     }
   }
 
+  @keyframes slide-left {
+    from{
+      transform: translateX(-1000px);
+    }
+    to{
+      transform: translateX(10px);
+    }
+    
+  }
+  @keyframes slide-right {
+    from{
+      margin-left: 100%;
+    }
+    to{
+      margin-left: 0;
+    }
+    
+  }
   #link-btn #link-icon{
     display: inline-block;
     vertical-align: top;
     color: white;
   }
+
+  
+  /*------------------ new preloader------------------------------ */
+  .title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+
+    .blocked {
+      width: 0%;
+      height: inherit;
+      background: #D62828;
+      position: absolute;
+      animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+      display: flex;
+    }
+
+    .title h1 {
+      font-family: 'Poppins';
+      color: #fff;
+      -webkit-animation: mainFadeIn 2s forwards;
+      -o-animation: mainFadeIn 2s forwards;
+      animation: mainFadeIn 2s forwards;
+      animation-delay: 1.6s;
+      opacity: 0;
+      display: flex;
+      align-items: baseline;
+      position: relative;
+    }
+     .title span {
+        width:0px;
+        height: 0px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+        animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+        animation-delay: 2s;
+        margin-left: 5px;
+        margin-top: -10px;
+        position: absolute;
+        bottom: 13px;
+        right: -12px;
+
+      }
+
+      
+    .role {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 30px;
+      margin-top: -10px;
+    }
+
+     .role .blocked {
+        width: 0%;
+        height: inherit;
+        background: #D62828;
+        position: absolute;
+        animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+        animation-delay: 2s;
+        display: flex;
+        padding-top: 10px;
+      }
+
+     .role p {
+        animation: secFadeIn 2s forwards;
+        animation-delay: 3.2s;
+        opacity: 0;
+         font-weight: 400;
+        font-family: 'Lato';
+        color: #ffffff;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+  
+
+
+
+
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #D62828;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: #D62828;
+    opacity: 1;
+    bottom: 45px;
+  }
+   65% {
+      width: 7px;
+    height: 7px;
+      bottom: 0px;
+      width: 15px
+   }
+   80% {
+      width: 10px;
+    height: 10px;
+      bottom: 20px
+   }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #D62828;
+    border: 0px solid #222;
+    bottom: 13px;
+
+  }
+}
+
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
