@@ -60,7 +60,8 @@ html, body {
   .loader{
     position: absolute;
     top: 40%;
-    left: 40%;
+    left: 30%;
+    /* transform: translate(-50%, -50%); */
     animation: pulse 0.8s infinite linear;
   }
   .rotate-div {

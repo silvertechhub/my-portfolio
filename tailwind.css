@@ -603,6 +603,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -1015,7 +1019,8 @@ html, body {
 .loader{
   position: absolute;
   top: 40%;
-  left: 40%;
+  left: 30%;
+  /* transform: translate(-50%, -50%); */
   -webkit-animation: pulse 0.8s infinite linear;
           animation: pulse 0.8s infinite linear;
 }
@@ -1464,6 +1469,10 @@ html, body {
 
   .md\:ml-96 {
     margin-left: 24rem;
+  }
+
+  .md\:mt-16 {
+    margin-top: 4rem;
   }
 
   .md\:flex {
