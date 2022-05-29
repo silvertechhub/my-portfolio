@@ -7,7 +7,7 @@ const degreeToRadian = (angle) => {
   const radius = 45;
   const diameter = radius * 2;
   
-  const circle = document.querySelector("#circular-text");
+  const circle = document.querySelector(".circular-text");
   circle.style.width = `${diameter}px`;
   circle.style.height = `${diameter}px`;
   
@@ -55,20 +55,20 @@ window.addEventListener('scroll', () => {
 
 // ------------------------inspection observer
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const square = entry.target.querySelectorAll('.animate__animated');
-    if (entry.isIntersecting) {
-      square.classList.add('animate__slideInLeft');
-	  return; // if we added the class, exit the function
-    }
+// const observer = new IntersectionObserver(entries => {
+//   entries.forEach(entry => {
+//     const square = entry.target.querySelectorAll('.animate__animated');
+//     if (entry.isIntersecting) {
+//       square.classList.add('animate__slideInLeft');
+// 	  return; // if we added the class, exit the function
+//     }
 
-    // We're not intersecting, so remove the class!
-    square.classList.remove('animate__slideInLeft');
-  });
-});
+//     // We're not intersecting, so remove the class!
+//     square.classList.remove('animate__slideInLeft');
+//   });
+// });
 
-observer.observe(document.querySelector('.project-cards'));
+// observer.observe(document.querySelector('.project-cards'));
 
 // ------------------------gsap
 
@@ -93,7 +93,17 @@ icon.addEventListener("click", () => { menu.classList.toggle("hidden");
    xIcon.classList.toggle("hidden");
    icon.classList.remove("hidden");
    menu.classList.add("hidden")
- })
+ });
+
+ const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+  icon.classList.remove("hidden")
+    xIcon.classList.add("hidden");
+    menu.classList.add("hidden");
+}
  
 // add preloader
 const preloader = document.querySelector('#pre-loader');

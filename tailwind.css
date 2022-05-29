@@ -555,8 +555,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 3rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-28 {
@@ -601,10 +601,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .block {
@@ -995,17 +991,25 @@ html, body {
 
 /* copied css */
 
-#circular-text {
+.circular-text {
   position: fixed;
   color:white;
   border-radius: 100%;
+  -webkit-animation: rotation 12s infinite linear;
+          animation: rotation 12s infinite linear;
   /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); */
   /* padding: 20px; */
 }
 
-#circular-text span {
+.circular-text span {
   position: absolute;
   transform-origin: top left;
+}
+
+@media (max-width: 640px) {
+  .circular-text {
+    position: absolute;
+  }
 }
 
 #pre-loader{
@@ -1023,11 +1027,6 @@ html, body {
   /* transform: translate(-50%, -50%); */
   -webkit-animation: pulse 0.8s infinite linear;
           animation: pulse 0.8s infinite linear;
-}
-
-.rotate-div {
-  -webkit-animation: rotation 12s infinite linear;
-          animation: rotation 12s infinite linear;
 }
 
 .animate__animated{
@@ -1443,6 +1442,10 @@ html, body {
     margin-right: 15rem;
   }
 
+  .md\:mt-16 {
+    margin-top: 4rem;
+  }
+
   .md\:mt-10 {
     margin-top: 2.5rem;
   }
@@ -1469,10 +1472,6 @@ html, body {
 
   .md\:ml-96 {
     margin-left: 24rem;
-  }
-
-  .md\:mt-16 {
-    margin-top: 4rem;
   }
 
   .md\:flex {

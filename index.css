@@ -38,17 +38,23 @@ html, body {
 
 
 /* copied css */
-#circular-text {
+.circular-text {
     position: fixed;
     color:white;
     border-radius: 100%;
+    animation: rotation 12s infinite linear;
     /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); */
     /* padding: 20px; */
   }
   
-  #circular-text span {
+  .circular-text span {
     position: absolute;
     transform-origin: top left;
+  }
+  @media (max-width: 640px) {
+    .circular-text {
+      position: absolute;
+    }
   }
   #pre-loader{
     background: black  no-repeat center center;
@@ -64,9 +70,7 @@ html, body {
     /* transform: translate(-50%, -50%); */
     animation: pulse 0.8s infinite linear;
   }
-  .rotate-div {
-    animation: rotation 12s infinite linear;
-  }
+  
   .animate__animated{
     top: 0;
   }
