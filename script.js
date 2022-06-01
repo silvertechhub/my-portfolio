@@ -52,32 +52,9 @@ window.addEventListener('scroll', () => {
     updateList();
 })
 
+// initalize Aos
+AOS.init();
 
-// ------------------------inspection observer
-
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     const square = entry.target.querySelectorAll('.animate__animated');
-//     if (entry.isIntersecting) {
-//       square.classList.add('animate__slideInLeft');
-// 	  return; // if we added the class, exit the function
-//     }
-
-//     // We're not intersecting, so remove the class!
-//     square.classList.remove('animate__slideInLeft');
-//   });
-// });
-
-// observer.observe(document.querySelector('.project-cards'));
-
-// ------------------------gsap
-
-// let tl = gsap.timeline({defaults: {ease: "none", duration: 2}});
-
-// tl.to(".projectCardA", {opacity: 1, X:500, stagger:.6,  })
-// // tl.to(".projectCard2", {opacity: 1, X:100, stagger:.4,  }, '-=2')
-
-// // tl.to("#card2", {opacity: 1, x:-10, duration: 4},'-=2')
 
 // -------------------------mobile menu
 const menu = document.querySelector('.mobile-menu');

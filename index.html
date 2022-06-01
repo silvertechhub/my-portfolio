@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tailwind.css">
     <!-- animate css -->
-    <link
-    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Sylvester Agubata</title>
     <link rel="shortcut icon" type="image/jpg" href="/assets/logo.png"/>
     <script src="https://kit.fontawesome.com/79e3375178.js" crossorigin="anonymous"></script>
 </head>
 <body class="text-white bg-body font-domaine">
-    <div id="pre-loader">
+    <!-- <div id="pre-loader">
         <div class="loader">
             
                 <div class="title">
@@ -27,7 +26,7 @@
                 </div>
         
         </div>
-    </div>
+    </div> -->
     <main id="home" class=" w-full h-screen bg-mobile-bg md:bg-bg-vh">
     <header class="bg-body px-8 ">
         <div class="container flex justify-between">
@@ -94,7 +93,7 @@
                 based in  Nigeria
                 specialized in creating smooth and pleasant websites which are <span class="text-hero">user-centeric</span> 
                 </article>
-                <a href="/assets/My_Resume.pdf" class="bg-white text-body hover:bg-transparent hover:text-white hover:border-2 hover:border-white mt-9 p-4 my-6 w-[150px] ml-28 md:ml-80"> View Resume</a>  
+                <a href="/assets/My_Resume.pdf" class="bg-white text-body hover:bg-transparent hover:text-white hover:border-2 hover:border-white mt-9 p-4 my-6 w-[150px] ml-24 md:ml-80"> View Resume</a>  
             </div>
             
         </div>
@@ -121,7 +120,7 @@
             </div>
             <div class="md:ml-20 my-20 md:pl-10">
                 <div class="project-cards grid md:grid-cols-2">
-                    <div id="" class=" mx-4 w-auto lg:w-[455px] shadow-xl border-2 border-white bg-zinc-800 mb-2 md:p-6 animate__animated  ">
+                    <div id="" class=" my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] shadow-xl border-2 border-white bg-zinc-800 mb-2 md:p-6" data-aos="fade-down-right" data-aos-duration="3000">
                        <div class="flex p-2 md:p-0 ">
                           <div class="border-2 border-white"> <img src="/assets/weather-app.png" alt="" class=" h-36 w-72 md:h-40 md:w-60"></div>
                           <div class="pl-4"> 
@@ -139,7 +138,7 @@
 
                     <!-- br -->
                 
-                    <div id="" class="my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] border-2 border-white bg-zinc-800 mb-2 md:p-6 animate__animated ">
+                    <div id="" class="my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] border-2 border-white bg-zinc-800 mb-2 md:p-6" data-aos="fade-down-left" data-aos-duration="3000">
                        <div class="flex p-2 md:p-0">
                         <div class="border-2 border-white">  <img src="/assets/timer.png" alt="" class="h-36 md:h-40 w-72 "></div>
                           <div class="pl-4"> 
@@ -160,7 +159,7 @@
                    
 
 
-                    <div id="card1" class="my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] bg-zinc-800 shadow-2xl border-2 border-white mb-2 md:p-6 animate__animated ">
+                    <div id="card1" class="my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] bg-zinc-800 shadow-2xl border-2 border-white mb-2 md:p-6" data-aos="flip-down" data-aos-duration="2000">
                         <div class=" flex p-2 md:p-0">
                             <div class="border-2 border-white">   <img src="/assets/money.png" alt="" class="h-36 md:h-40 w-72 "></div>
                            <div class="pl-4"> 
@@ -178,11 +177,11 @@
                            and uuid npm package for id generation</p>
                     </div>
                     <!-- br -->
-                    <div id="card1" class="my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] border-2 border-white bg-zinc-800 mb-2 md:p-6 animate__animated animate__slideInRight">
+                    <div id="card1" class="my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] border-2 border-white bg-zinc-800 mb-2 md:p-6" data-aos="flip-up" data-aos-duration="2000">
                         <div class="flex p-2 md:p-0">
                             <img src="/assets/news2.webp" alt="" class=" h-36 md:h-40 w-72">
                            <div class="pl-4"> 
-                               <h1 class="text-lg md:text-2xl">Give Hope</h1> <h3 class=" text-base md:text-lg">React.js</h3>
+                               <h1 class="text-lg md:text-2xl">Give Hope</h1> <h3 class=" text-base md:text-lg">React.js + Tailwind CSS</h3>
                                <div class="flex py-6 justify-between">
                                    <a class="text-sm" href="https://github.com/silvertechhub/givehope">Code <i class="fa-solid fa-code-branch"></i></a>
                                    <a class="text-sm" href="https://silvertechhub.github.io/givehope">Live <i class="fa-solid fa-link"></i></a>
@@ -193,32 +192,31 @@
                          <p class="px-2 md:px-0">A Charity Foundation template built with react and styled with tailwind css</p>
                      </div>
                     <!--  -->
-                    <div id="card1" class="my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] border-2 border-white bg-zinc-800 mb-2 md:p-6 animate__animated animate__slideInRight">
+                    <div id="card1" class="my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] border-2 border-white bg-zinc-800 mb-2 md:p-6 " data-aos="zoom-in" data-aos-duration="1500">
                         <div class="flex p-2 md:p-0">
                            <div class="border-2 border-white"><lottie-player src="https://assets10.lottiefiles.com/packages/lf20_8uHQ7s.json"  background="transparent" 
                              speed="1"  style="width: 240px; height: 160px;"  loop  autoplay></lottie-player></div> 
                            
                            <div class="pl-4"> 
-                               <h1 class="text-lg md:text-2xl">Weather App</h1> <h3 class=" text-base md:text-lg">React.js</h3>
+                               <h1 class="text-lg md:text-2xl">Sign In/Sign up Page</h1> <h3 class=" text-base md:text-lg">React.js</h3>
                                <div class="flex py-6 justify-between">
-                                   <a class="text-sm" href="#">Code <i class="fa-solid fa-code-branch"></i></a>
-                                   <a class="text-sm" href="#">Live <i class="fa-solid fa-link"></i></a>
+                                   <!-- <a class="text-sm" href="#">Code <i class="fa-solid fa-code-branch"></i></a>
+                                   <a class="text-sm" href="#">Live <i class="fa-solid fa-link"></i></a> -->
                                </div>
                           </div>
                         </div>
                          <div class="border-b-2  pt-2 md:pt-4 border-zinc-300"></div>
-                         <p class="px-2 md:px-0">on the hill side of kuje lies the royal throne. 
-                             on the hill side of kuje lies the royal throne</p>
+                         <p class=" text-center text-2xl px-2 md:px-0">Work in Progress</p>
                      </div>
                   <!-- br  -->
                     
-                    <div id="card2" class="my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] border-2 border-white bg-zinc-800 mb-2 md:p-6 animate__animated ">
+                    <div id="card2" class="my-6 mx-4 w-auto lg:w-[455px] md:h-[280px] border-2 border-white bg-zinc-800 mb-2 md:p-6"  data-aos="zoom-in" data-aos-duration="1000">
                         <div class="flex p-2 md:p-0">
                             
                             <div class="border-2 border-white"> <lottie-player class="h-36 md:h-40 w-40" src="https://assets6.lottiefiles.com/private_files/lf30_y9czxcb9.json"  background="transparent"
                             speed="1"  style="width: 240px; height: 160pxpx;"  loop autoplay></lottie-player></div>
                            <div class="pl-4"> 
-                               <h1 class="text-base md:text-2xl">Link Tree</h1> <h3 class="text-sm ">work in progress</h3>
+                               <h1 class="text-base md:text-2xl">Link Tree</h1> <h3 class="text-sm ">React + Nodejs</h3>
                                <div class="flex py-6 justify-between">
                                    <!-- <a href="#">Code <i class="fa-solid fa-code-branch"></i></a>
                                    <a href="#">Live <i class="fa-solid fa-link"></i></a> -->
@@ -226,8 +224,7 @@
                           </div>
                         </div>
                         <div class="border-b-2 pt-2 md:pt-4 border-zinc-300"></div>
-                        <p  class="p-2 md:px-0">on the hill side of kuje lies the royal throne. 
-                            on the hill side of kuje lies the royal throne</p>
+                        <p  class=" text-center text-2xl p-2 md:px-0">Work in Progress</p>
                     </div>
                     <!-- br -->
                     
@@ -270,9 +267,9 @@
                     <div class="px-4 ">Facebook Build for SDG <br><i class="fa-solid fa-location-dot"></i>  Remote</div>
                 </div>
                 <div class="inline-block md:pl-96">
-                  <div ><a href="" class="text-sm underline-offset-4">details <i class="fa-solid fa-angles-right"></i></a></div>
+                  <div ><a href="https://drive.google.com/file/d/1kuv8wssLrk-P_Sxg2rM4UWteEHybJ_v6/view?usp=sharing" class="text-sm underline-offset-4">details <i class="fa-solid fa-angles-right"></i></a></div>
                   <div class="my-24"><a href="" class="text-sm ">details <i class="fa-solid fa-angles-right"></i></a></div>
-                  <div class="my-12"><a href="" class="text-sm ">details <i class="fa-solid fa-angles-right"></i></a></div>
+                  <div class="my-12"><a href="https://drive.google.com/file/d/1vQvyhyzs8RhZSDigKkIC-MEH0UY7fs_6/view?usp=sharing" class="text-sm ">details <i class="fa-solid fa-angles-right"></i></a></div>
                 </div>
 
             </div>
@@ -337,8 +334,7 @@
     </section>
     
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
